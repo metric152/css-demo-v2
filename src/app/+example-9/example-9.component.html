@@ -1,0 +1,22 @@
+<p>
+  <b>display: grid</b> container with a 5 x 5 grid using <b>rows</b> and <b>columns</b>. <button (click)="createElement()" type="button" name="button">Create element</button>
+</p>
+<app-caution></app-caution>
+<div class="container-grid">
+    <div class="item-grid" [ngStyle]="{'grid-row-start': element.rowStart, 'grid-row-end': element.rowEnd, 'grid-column-start': element.colStart, 'grid-column-end': element.colEnd}" *ngFor="let element of elements; let $index = index">
+        <h4>{{element.name}}</h4>
+        row start <select [(ngModel)]="element.rowStart">
+            <option *ngFor="let row of rows" [ngValue]="row">{{row}}</option>
+        </select><br/>
+        row end <select [(ngModel)]="element.rowEnd">
+            <option *ngFor="let row of rows" [ngValue]="row">{{row}}</option>
+        </select><br/>
+        col start <select [(ngModel)]="element.colStart">
+            <option *ngFor="let col of cols" [ngValue]="col">{{col}}</option>
+        </select><br/>
+        col end <select [(ngModel)]="element.colEnd">
+            <option *ngFor="let col of cols" [ngValue]="col">{{col}}</option>
+        </select><br/>
+        <button (click)="remove($index)">Remove</button>
+    </div>
+</div>

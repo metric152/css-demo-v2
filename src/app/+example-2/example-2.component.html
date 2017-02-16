@@ -1,0 +1,16 @@
+<p>
+  <b>display: flex</b> with <b>flex-shrink</b> for children.
+</p>
+<div class="container-flex">
+    <div class="item-flex" [ngStyle]="{'flex-grow': child.grow, 'flex-shrink': child.shrink}" *ngFor="let child of children">
+        <b>{{child.num}}</b><br/>
+        shrink:<select [(ngModel)]="child.shrink">
+            <option value="">---</option>
+            <option *ngFor="let option of options" [ngValue]="option">{{option}}</option>
+        </select><br/>
+        grow:<select [(ngModel)]="child.grow">
+            <option value="">---</option>
+            <option *ngFor="let option of options" [ngValue]="option">{{option}}</option>
+        </select>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+.item-flex{
+    width: 25%; /* can't use flex-grow on this setup*/
+}
+
+.large{
+    width: 40%;
+}

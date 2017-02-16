@@ -1,0 +1,12 @@
+<p>
+  <b>display: flex</b> container with <b>align-self</b> for children.
+</p>
+<div class="container-flex">
+    <div class="item-flex" [ngStyle]="{'align-self': child.prop}" *ngFor="let child of children">
+        {{child.num}}
+        <select [(ngModel)]="child.prop">
+            <option value="">---</option>
+            <option *ngFor="let option of options" [ngValue]="option">{{option}}</option>
+        </select>
+    </div>
+</div>

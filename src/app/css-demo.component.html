@@ -1,0 +1,28 @@
+<h1>
+  {{title}}
+</h1>
+<nav>
+    <details>
+        <summary>Flexbox examples</summary>
+        <details>
+            <summary>Child examples</summary>
+            <a [routerLink]="['/example-1']">Example 1</a>
+            <a [routerLink]="['/example-2']">Example 2</a>
+            <a [routerLink]="['/example-3']">Example 3</a>
+        </details>
+        <details>
+            <summary>Parent examples</summary>
+            <a [routerLink]="['/example-4']">Example 4</a>
+            <a [routerLink]="['/example-5']">Example 5</a>
+            <a [routerLink]="['/example-6']">Example 6</a>
+            <a [routerLink]="['/example-7']">Example 7</a>
+            <a [routerLink]="['/example-8']">Example 8</a>
+        </details>
+    </details>
+    <details>
+        <summary>Grid examples</summary>
+        <a [routerLink]="['/example-9']">Example 9</a>
+        <a [routerLink]="['/example-10']">Example 10</a>
+    </details>
+</nav>
+<router-outlet></router-outlet>

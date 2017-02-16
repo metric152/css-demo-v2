@@ -1,0 +1,8 @@
+.container-flex{
+    /* Give the container some height */
+    height: 300px;
+}
+
+.item-flex{
+    flex-grow: 1;
+}

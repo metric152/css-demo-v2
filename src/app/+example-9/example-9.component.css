@@ -1,0 +1,23 @@
+.container-grid{
+    /* Define the columns for the grid. Each column can have a reference name before it's width. */
+    grid-template-columns: [col-1 col-start] auto [col-2] auto [col-3] auto [col-4] auto [col-5] auto [col-6 col-end];
+    /* Define the rows for the grid. Each row can have a reference name before it's width. Best to set a height on the container so auto works */
+    grid-template-rows: [row-1 row-start] auto [row-2] auto [row-3] auto [row-4] auto [row-5] auto [row-6 row-end];
+    /* Define areas on the grid that items can be assigned to */
+    grid-template-areas: "header header header header header"
+                         "left-side main main main right-side"
+                         "left-side main main main right-side"
+                         "left-side main main main right-side"
+                         "footer footer footer footer footer";
+}
+
+.a{
+    /* Define where this grid column starts using the row number */
+    grid-column-start: col-2;
+    /* Define where the column ends. Use the column name reference */
+    grid-column-end: col-5;
+    /* Define where the row starts by reference */
+    grid-row-start: row-2;
+    /* Define where the row ends by line number */
+    grid-row-end: row-5;
+}

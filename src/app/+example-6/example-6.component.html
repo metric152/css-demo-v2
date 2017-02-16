@@ -1,0 +1,10 @@
+<p>
+    <b>display: flex</b> container with <b>justify-content:</b> <select [(ngModel)]="cssProp">
+        <option *ngFor="let option of options" [ngValue]="option">{{option}}</option>
+    </select> on parent element.
+</p>
+<div class="container-flex" [ngStyle]="{'justify-content': cssProp}">
+    <div class="item-flex large">1</div>
+    <div class="item-flex">2</div>
+    <div class="item-flex large">3</div>
+</div>

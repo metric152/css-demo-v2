@@ -1,0 +1,13 @@
+<p>
+  <b>display: grid</b> container with a 5 x 5 grid using <b>grid-area</b>. <button (click)="createElement()" type="button" name="button">Create element</button>
+</p>
+<app-caution></app-caution>
+<div class="container-grid">
+    <div class="item-grid" [ngStyle]="{'grid-area': element.gridArea}" *ngFor="let element of elements; let $index = index">
+        <h4>{{element.name}}</h4>
+        grid area <select [(ngModel)]="element.gridArea">
+            <option *ngFor="let area of areas" [ngValue]="area">{{area}}</option>
+        </select>
+        <button (click)="remove($index)">Remove</button>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+<p>
+    <b>display: flex</b> container with <b>flex-grow</b> for children elements.
+</p>
+<div class="container-flex">
+    <div class="item-flex {{child.prop}}"  *ngFor="let child of children">{{child.num}} <select [(ngModel)]="child.prop">
+        <option value="">---</option>
+        <option *ngFor="let option of options" [ngValue]="option">{{option}}</option>
+    </select></div>
+</div>

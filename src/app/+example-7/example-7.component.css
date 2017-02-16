@@ -1,0 +1,7 @@
+.container-flex{
+    height: 200px;
+}
+
+.item-flex{
+    flex-grow: 1; /* This is a unitless value that serves as a proportion */
+}
